@@ -4,7 +4,13 @@ import router from "./router";
 import store from "./store";
 import "./registerServiceWorker";
 
+// ***** Styling *****
+import BootstrapVue from "bootstrap-vue";
+import "./scss/custom.scss";
+
 Vue.config.productionTip = false;
+
+Vue.use(BootstrapVue);
 
 new Vue({
   router,

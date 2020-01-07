@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>Linneas vackra om sig sida!</h1>
+  <div>
+    <h1>hej jag är dina bilder</h1>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 // @ is an alias to /src
 
 export default {
-  name: "about",
+  name: "gallery",
   components: {}
 };
 </script>
