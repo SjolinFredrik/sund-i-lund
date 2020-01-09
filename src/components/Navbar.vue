@@ -27,6 +27,11 @@
                 Kontakta
               </span>
             </li>
+            <li>
+              <span @click="linksInOverlay('/gallery')" class="overlayLink">
+                Galleri
+              </span>
+            </li>
           </ul>
         </div>
       </div>
@@ -69,7 +74,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #navigation {
   height: 62px;
   z-index: 10000;

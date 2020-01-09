@@ -6,22 +6,28 @@
     <main>
       <router-view />
     </main>
-
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
 export default {
   name: "app",
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 };
 </script>
 
 <style lang="scss">
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid"; // fas
+@import "~@fortawesome/fontawesome-free/scss/regular"; // far
+@import "~@fortawesome/fontawesome-free/scss/brands"; // fab
 * {
   margin: 0;
   padding: 0;
@@ -29,25 +35,17 @@ export default {
 p {
   margin: 0;
 }
+main {
+  flex: 1;
+}
 #app {
   // font-family: "Comic sans ms", Helvetica, Arial, sans-serif;
   font-family: "Oswald", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 </style>
