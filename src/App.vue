@@ -33,14 +33,21 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
   padding: 0;
 }
 p {
-  margin: 0;
+  margin: 0 !important;
 }
 main {
   flex: 1;
 }
 #app {
+  background-image: url("/img/green_cloudy.jpg");
+  background-attachment: fixed;
+  background-color: rgb(15, 153, 135);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
   // font-family: "Comic sans ms", Helvetica, Arial, sans-serif;
-  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

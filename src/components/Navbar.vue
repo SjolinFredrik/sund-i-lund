@@ -1,42 +1,34 @@
 <template>
-  <div>
-    <nav id="navigation" class="navbar navbar-transparent">
-      <router-link class="navbar-brand" to="/">
-        <h1 class="title-navbar">Sund i Lund</h1>
-      </router-link>
-      <!-- Hamburger-->
-      <div class="navbar-header">
-        <div
-          class="hamburger"
-          :class="toggle ? 'open' : ''"
-          ref="animateHamburger"
-          @click="navbarToggles"
-        >
-          <span class="strips"></span>
-        </div>
-        <div ref="myOverlay" class="overlay">
-          <!-- Overlay content -->
-          <ul class="overlay-content">
-            <li>
-              <span @click="linksInOverlay('/')" class="overlayLink">
-                Hem
-              </span>
-            </li>
-            <li>
-              <span @click="linksInOverlay('/about')" class="overlayLink">
-                Kontakta
-              </span>
-            </li>
-            <li>
-              <span @click="linksInOverlay('/gallery')" class="overlayLink">
-                Galleri
-              </span>
-            </li>
-          </ul>
-        </div>
+  <nav id="navigation" class="navbar navbar-transparent">
+    <router-link class="navbar-brand" to="/">
+      <h1 class="title-navbar">Sund i Lund</h1>
+    </router-link>
+    <!-- Hamburger-->
+    <div class="navbar-header">
+      <div
+        class="hamburger"
+        :class="toggle ? 'open' : ''"
+        ref="animateHamburger"
+        @click="navbarToggles"
+      >
+        <span class="strips"></span>
       </div>
-    </nav>
-  </div>
+      <div ref="myOverlay" class="overlay">
+        <!-- Overlay content -->
+        <ul class="overlay-content">
+          <li>
+            <span @click="linksInOverlay('/')" class="overlayLink">Hem</span>
+          </li>
+          <li>
+            <span @click="linksInOverlay('/kontakta')" class="overlayLink">Kontakta</span>
+          </li>
+          <li>
+            <span @click="linksInOverlay('/galleri')" class="overlayLink">Galleri</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -50,7 +42,8 @@ export default {
     };
   },
   methods: {
-    linksInOverlay() {
+    linksInOverlay(link) {
+      this.$router.push(link);
       this.navbarToggles();
     },
 
@@ -76,7 +69,7 @@ export default {
 
 <style lang="scss" scoped>
 #navigation {
-  height: 62px;
+  // height: 62px;
   z-index: 10000;
 }
 .title-navbar {
