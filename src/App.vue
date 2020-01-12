@@ -36,9 +36,11 @@ p {
   margin: 0 !important;
 }
 main {
+  //  Fixed footer
   flex: 1;
 }
 #app {
+  // Image for the whole site
   background-image: url("/img/green_cloudy.jpg");
   background-attachment: fixed;
   background-color: rgb(15, 153, 135);
@@ -46,11 +48,26 @@ main {
   background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;
-  // font-family: "Comic sans ms", Helvetica, Arial, sans-serif;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  // Color variables
+  --primary: #29a69b;
+  --secondary: #7296d4;
+  --tertiary: #334b48;
+  --inputColor: #96b1ad;
+  --headers: #f5f5f5;
+  //  Headings
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--headers);
+  }
+  // Fixed footer
   display: flex;
   min-height: 100vh;
   flex-direction: column;

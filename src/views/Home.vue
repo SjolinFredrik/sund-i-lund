@@ -21,7 +21,12 @@
       </b-col>
       <b-col class="text-left">
         <h2>Linnea Nilsson!</h2>
-        <p>Hej jag heter Linnea och jag tycker Sjölle e helt mikket sniggHej jag heter Linnea och jag tycker Sjölle e helt mikket sniggHej jag heter Linnea och jag tycker Sjölle e helt mikket sniggHej jag heter Linnea och jag tycker Sjölle e helt mikket snigg.</p>
+        <p>
+          Hej jag heter Linnea och jag tycker Sjölle e helt mikket snigg. Hej
+          jag heter Linnea och jag tycker Sjölle e helt mikket sniggHej jag
+          heter Linnea och jag tycker Sjölle e helt mikket snigg. Hej jag heter
+          Linnea och jag tycker Sjölle e helt mikket snigg.
+        </p>
       </b-col>
     </b-row>
   </b-container>

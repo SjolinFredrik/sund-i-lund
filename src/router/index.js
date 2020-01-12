@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import Gallery from "../views/Gallery.vue";
-import Author from "../views/Author.vue";
+import Admin from "../views/Admin.vue";
 
 Vue.use(VueRouter);
 
@@ -25,8 +25,8 @@ const routes = [
   },
   {
     path: "/admin",
-    name: "author",
-    component: Author
+    name: "admin",
+    component: Admin
   }
 ];
 

@@ -20,10 +20,14 @@
             <span @click="linksInOverlay('/')" class="overlayLink">Hem</span>
           </li>
           <li>
-            <span @click="linksInOverlay('/kontakta')" class="overlayLink">Kontakta</span>
+            <span @click="linksInOverlay('/kontakta')" class="overlayLink">
+              Kontakta
+            </span>
           </li>
           <li>
-            <span @click="linksInOverlay('/galleri')" class="overlayLink">Galleri</span>
+            <span @click="linksInOverlay('/galleri')" class="overlayLink">
+              Galleri
+            </span>
           </li>
         </ul>
       </div>
@@ -60,7 +64,7 @@ export default {
         const hamburgerStrips = this.$refs.animateHamburger;
         hamburgerStrips.classList.remove("open");
         const closeNav = this.$refs.myOverlay;
-        closeNav.style.left = "-130vw";
+        closeNav.style.left = "-100vw";
       }
     }
   }
@@ -75,7 +79,7 @@ export default {
 .title-navbar {
   color: white;
   font-weight: 600;
-  font-size: 60px;
+  font-size: 40px;
   margin: 0;
   @media (min-width: 320px) and (max-width: 767.98px) {
     font-size: 25px;
