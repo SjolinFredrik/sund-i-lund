@@ -60,7 +60,7 @@
     margin-top: 40px;
     padding: 20px;
     border-radius: 10px;
-    color: #f5f5f5;
+    color: var(--text);
     background-color: rgba(0, 0, 0, 0.3);
     .author-pic {
       border-radius: 50%;

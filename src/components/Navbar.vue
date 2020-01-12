@@ -77,7 +77,6 @@ export default {
   z-index: 10000;
 }
 .title-navbar {
-  color: white;
   font-weight: 600;
   font-size: 40px;
   margin: 0;
@@ -99,7 +98,7 @@ export default {
   }
 }
 span.strips {
-  background-color: white;
+  background-color: var(--text);
   height: 4px;
   width: 24px;
   border-radius: 2px;
@@ -115,7 +114,7 @@ div.hamburger.open span.strips {
 }
 span.strips::before {
   content: "";
-  background-color: white;
+  background-color: var(--text);
   height: 4px;
   width: 24px;
   border-radius: 2px;
@@ -135,7 +134,7 @@ div.hamburger.open span.strips::before {
 }
 span.strips::after {
   content: "";
-  background-color: white;
+  background-color: var(--text);
   height: 4px;
   width: 24px;
   border-radius: 2px;

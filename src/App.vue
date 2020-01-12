@@ -56,7 +56,7 @@ main {
   --secondary: #7296d4;
   --tertiary: #334b48;
   --inputColor: #96b1ad;
-  --headers: #f5f5f5;
+  --text: #f5f5f5;
   //  Headings
   h1,
   h2,
@@ -65,7 +65,7 @@ main {
   h5,
   h6 {
     font-family: "Montserrat", sans-serif;
-    color: var(--headers);
+    color: var(--text);
   }
   // Fixed footer
   display: flex;

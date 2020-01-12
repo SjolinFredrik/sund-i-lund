@@ -17,7 +17,7 @@
     </b-row>
     <b-row class="my-1">
       <b-col sm="6">
-        <input type="submit" class="primary-btn" placeholder="Logga in"/>
+        <input type="submit" class="primary-btn" placeholder="Logga in" />
       </b-col>
     </b-row>
   </b-container>
@@ -71,7 +71,7 @@ export default {
     padding: 10px;
     border: none;
     border-radius: 4px;
-    color: #fff;
+    color: var(--text);
     background-color: var(--primary);
     &:active {
       opacity: 0.8;
