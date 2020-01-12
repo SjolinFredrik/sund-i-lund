@@ -29,6 +29,11 @@
         </p>
       </b-col>
     </b-row>
+    <b-row class="scroll-to-posts">
+      <b-col sm="auto">
+        <i class="fa fa-chevron-down fa-4x" aria-hidden="true"></i>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -67,6 +72,12 @@
       width: 100px;
       height: 100px;
     }
+  }
+  .scroll-to-posts {
+    margin-top: 30px;
+    color: var(--secondary);
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>
