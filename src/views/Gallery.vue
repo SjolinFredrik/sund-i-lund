@@ -8,7 +8,7 @@
 // @ is an alias to /src
 
 export default {
-  name: "gallery",
+  name: "gallery-component",
   components: {}
 };
 </script>

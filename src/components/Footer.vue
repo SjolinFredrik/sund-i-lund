@@ -3,7 +3,7 @@
     <b-container fluid>
       <div class="outer-container">
         <div class="inner-container">
-          <div v-for="item in items" :key="item.id">
+          <div :class="item.class" v-for="item in items" :key="item.id">
             <a :href="item.href" :title="item.title" target="_blank">
               <i :style="item.style" :class="item.icon"></i>&nbsp;
             </a>
@@ -26,13 +26,15 @@ export default {
           title: "Hitta mig på Facebook",
           style: "color: #1877f2 !important",
           icon: "fab fa-facebook-square fa-2x",
+          class: "facebook",
           id: 1
         },
         {
           href: "https://www.instagram.com/ww_coachlinnea/",
           title: "Hitta mig på Instagram",
-          style: "color: #c32aa3 !important",
-          icon: "fab fa-instagram fa-2x",
+          style: "color: var(--text) !important",
+          icon: "fab fa-instagram fa-1x",
+          class: "instagram",
           id: 2
         },
         {
@@ -40,6 +42,7 @@ export default {
           title: "Hitta mig på Linkedin",
           style: "color: #007bb5 !important",
           icon: "fab fa-linkedin fa-2x",
+          class: "linkedin",
           id: 3
         }
       ]
@@ -57,6 +60,25 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+  }
+  .instagram {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+    background: #d6249f;
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
   }
 }
 </style>

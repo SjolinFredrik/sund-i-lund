@@ -23,6 +23,7 @@ export default {
 </script>
 
 <style lang="scss">
+// Font awesome import
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/solid"; // fas

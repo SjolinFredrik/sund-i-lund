@@ -29,6 +29,11 @@
         </p>
       </b-col>
     </b-row>
+    <b-row class="scroll-to-posts">
+      <b-col class="icon-col">
+        <a class="icon-opt fa fa-chevron-down faa-pulse animated fa-4x"></a>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -37,7 +42,7 @@
   max-width: 600px;
   position: relative;
   .eye-catcher {
-    color: white;
+    color: var(--text);
     position: relative;
     .cloud-image {
       width: 100%;
@@ -57,7 +62,7 @@
     }
   }
   .info {
-    margin-top: 40px;
+    margin-top: 30px;
     padding: 20px;
     border-radius: 10px;
     color: var(--text);
@@ -67,6 +72,66 @@
       width: 100px;
       height: 100px;
     }
+  }
+  .scroll-to-posts {
+    margin-top: 15px;
+    .icon-col {
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .icon-opt {
+        &:hover {
+          cursor: pointer;
+          color: var(--secondary);
+        }
+      }
+    }
+  }
+  /***** PULSE *****/
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+
+    50% {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+
+    100% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+
+    50% {
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+
+    100% {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+
+  .faa-pulse.animated,
+  .faa-pulse.animated-hover:hover,
+  .faa-parent.animated-hover:hover > .faa-pulse {
+    -webkit-animation: pulse 2s linear infinite;
+    animation: pulse 2s linear infinite;
   }
 }
 </style>

@@ -29,6 +29,11 @@
               Galleri
             </span>
           </li>
+          <li>
+            <span @click="linksInOverlay('/blog')" class="overlayLink">
+              Blog
+            </span>
+          </li>
         </ul>
       </div>
     </div>
