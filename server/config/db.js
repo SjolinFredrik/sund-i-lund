@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const { connectionString } = require("./connectionString.js");
-
 const connectToDb = () => {
   mongoose
     .connect(process.env.DB_API || connectionString, {
