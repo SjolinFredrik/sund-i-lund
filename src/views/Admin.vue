@@ -67,7 +67,7 @@ export default {
     },
     async submitLogin(e) {
       e.preventDefault();
-      console.log("email:", this.email, "pw:", this.password);
+      // console.log("email:", this.email, "pw:", this.password);
       this.loginPosted = true;
       // Postrequest...
       // let responseRaw = await fetch('/api/login', {

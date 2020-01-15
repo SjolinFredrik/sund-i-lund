@@ -1,5 +1,5 @@
 const express = require("express");
-const encryptPassword = require("encryptPassword");
+const encryptPassword = require("../config/encryptPassword");
 const User = require("../schema/User");
 
 const router = express.Router();
