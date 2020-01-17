@@ -11,7 +11,7 @@
       </b-row>
       <b-row class="my-1">
         <b-col sm="6" lg="6">
-          <form @submit="this.submitLogin">
+          <form @submit="submitLogin">
             <input
               class="admin-inputs mb-3"
               v-model="email"
@@ -67,22 +67,23 @@ export default {
     },
     async submitLogin(e) {
       e.preventDefault();
-      // console.log("email:", this.email, "pw:", this.password);
       this.loginPosted = true;
       // Postrequest...
-      // let responseRaw = await fetch('/api/login', {
-      //  method: 'POST'
-      //  headers: {
-      //   Content-Type: application/json
-      //  },
-      //  data: {
-      //   email: this.email,
-      //   password: this.password
-      //  }
-      //})
-      // let response = await responseRaw.json()
-      // if(response.msg === 'Success') { this.loggedIn = true }
-      // success => this.loggedIn = true
+      let responseRaw = await fetch("/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: this.email,
+          password: this.password
+        })
+      });
+      this.loginPosted = false;
+      let response = await responseRaw.json();
+      if (response.msg === "Success") {
+        this.loggedIn = true;
+      }
     }
   }
 };
@@ -115,14 +116,13 @@ export default {
     border: none;
     border-radius: 4px;
     color: var(--text);
-    background-color: var(--primary);
+    background-color: var(--buttonColor);
     &:active {
       opacity: 0.8;
     }
     &:hover {
       cursor: pointer;
-      background-color: var(--secondary);
-      opacity: 0.6;
+      background-color: var(--buttonColorHover);
     }
   }
 }

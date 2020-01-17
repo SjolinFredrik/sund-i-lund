@@ -4,13 +4,14 @@ import router from "./router";
 import store from "./store";
 import "./registerServiceWorker";
 
-// ***** Styling *****
+/***** Styling *****/
+import vueSmoothScroll from "vue2-smooth-scroll";
 import BootstrapVue from "bootstrap-vue";
 import "./scss/custom.scss";
 
 Vue.config.productionTip = false;
 
-Vue.use(BootstrapVue);
+Vue.use(BootstrapVue, vueSmoothScroll);
 
 new Vue({
   router,

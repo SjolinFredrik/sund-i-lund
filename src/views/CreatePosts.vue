@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>Linneas vackra om sig sida!</h1>
+    <h1>CK WE NEED YOU TO LOVE FREDDE!!</h1>
   </div>
 </template>
 

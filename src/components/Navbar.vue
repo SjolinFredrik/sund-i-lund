@@ -20,8 +20,8 @@
             <span @click="linksInOverlay('/')" class="overlayLink">Hem</span>
           </li>
           <li>
-            <span @click="linksInOverlay('/kontakta')" class="overlayLink">
-              Kontakta
+            <span @click="linksInOverlay('/blogg')" class="overlayLink">
+              Blogg
             </span>
           </li>
           <li>
@@ -30,8 +30,8 @@
             </span>
           </li>
           <li>
-            <span @click="linksInOverlay('/blog')" class="overlayLink">
-              Blog
+            <span @click="linksInOverlay('/hitta-hit')" class="overlayLink">
+              Information / Hitta hit
             </span>
           </li>
         </ul>
@@ -78,7 +78,6 @@ export default {
 
 <style lang="scss" scoped>
 #navigation {
-  // height: 62px;
   z-index: 10000;
 }
 .title-navbar {
