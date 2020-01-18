@@ -23,6 +23,7 @@ export default {
 </script>
 
 <style lang="scss">
+// Font awesome import
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/solid"; // fas
@@ -55,6 +56,8 @@ main {
   --primary: #29a69b;
   --secondary: #7296d4;
   --tertiary: #334b48;
+  --buttonColor: #ffa17a;
+  --buttonColorHover: #cf8464;
   --inputColor: #96b1ad;
   --text: #f5f5f5;
   //  Headings

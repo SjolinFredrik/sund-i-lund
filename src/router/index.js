@@ -1,8 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import About from "../views/About.vue";
+import Blog from "../views/Blog.vue";
 import Gallery from "../views/Gallery.vue";
+import Contact from "../views/Contact.vue";
+import CreatePosts from "../views/CreatePosts.vue";
 import Admin from "../views/Admin.vue";
 
 Vue.use(VueRouter);
@@ -19,9 +21,19 @@ const routes = [
     component: Gallery
   },
   {
-    path: "/kontakt",
-    name: "kontakta",
-    component: About
+    path: "/blogg",
+    name: "blogg",
+    component: Blog
+  },
+  {
+    path: "/skapa-inlägg",
+    name: "/skapa-inlägg",
+    component: CreatePosts
+  },
+  {
+    path: "/hitta-hit",
+    name: "/hitta-hit",
+    component: Contact
   },
   {
     path: "/admin",

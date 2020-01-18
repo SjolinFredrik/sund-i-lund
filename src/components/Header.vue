@@ -1,6 +1,4 @@
 <template>
-  <!-- <HomeEx /> -->
-  <div>
   <b-container class="home">
     <div class="eye-catcher">
       <img
@@ -31,70 +29,19 @@
         </p>
       </b-col>
     </b-row>
-    <b-row class="icon-container">
+    <b-row class="scroll-to-posts">
       <b-col class="icon-col">
-        <router-link class="icon-col" to="blogg">
-          <i
-            class="icon-opt fas fa-blog faa-pulse animated fa-3x"
-            title="Till bloggen!"
-          ></i>
-        </router-link>
+        <a class="icon-opt fa fa-chevron-down faa-pulse animated fa-4x"></a>
       </b-col>
     </b-row>
   </b-container>
-  <b-container>
-          <b-row>
-        <b-col class="collll bg-white">
-          Denna collen har en jävla massa artiklar
-          </b-col>
-      </b-row>
-          <b-row>
-        <b-col class="collll bg-white">
-          Denna collen har en jävla massa artiklar
-          </b-col>
-      </b-row>
-          <b-row>
-        <b-col class="collll bg-white">
-          Denna collen har en jävla massa artiklar
-          </b-col>
-      </b-row>
-          <b-row>
-        <b-col class="collll bg-white">
-          Denna collen har en jävla massa artiklar
-          </b-col>
-      </b-row>
-          <b-row>
-        <b-col class="collll bg-white">
-          Denna collen har en jävla massa artiklar
-          </b-col>
-      </b-row>
-          <b-row>
-        <b-col class="collll bg-white">
-          Denna collen har en jävla massa artiklar
-          </b-col>
-      </b-row>
-          <b-row>
-        <b-col class="collll bg-white">
-          Denna collen har en jävla massa artiklar
-          </b-col>
-      </b-row>
-  </b-container>
-  </div>
 </template>
-<script> 
-export default {
-name:"yallayalla",
-}
-</script>
+
 <style lang="scss" scoped>
-.collll{
-  height: 200px;
-  margin-bottom: 20px;
-}
 .home {
-  height: calc(100vh);
   max-width: 600px;
   position: relative;
+  height: 100vh;
   .eye-catcher {
     color: var(--text);
     position: relative;
@@ -127,14 +74,13 @@ name:"yallayalla",
       height: 100px;
     }
   }
-  .icon-container {
-    margin-top: 20px;
+  .scroll-to-posts {
+    margin-top: 50px;
     .icon-col {
       color: var(--buttonColor);
       display: flex;
       align-items: center;
       justify-content: center;
-      text-decoration: none;
       .icon-opt {
         &:hover {
           cursor: pointer;
