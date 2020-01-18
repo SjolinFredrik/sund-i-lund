@@ -7,7 +7,7 @@
     </b-row>
     <b-container class>
       <b-row>
-        <b-col class="information" sm="12" md="6">
+        <b-col class="information" cols="12" md="6">
           <h4>Sektion 1</h4>
         </b-col>
         <b-col class="map mt-2 mt-md-0" cols="12" md="6">

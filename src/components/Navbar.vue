@@ -79,10 +79,13 @@ export default {
 <style lang="scss" scoped>
 #navigation {
   z-index: 10000;
+  position: fixed;
+  width: 100%;
 }
 .title-navbar {
   font-weight: 600;
   font-size: 40px;
+  position: relative;
   margin: 0;
   @media (min-width: 320px) and (max-width: 767.98px) {
     font-size: 25px;
