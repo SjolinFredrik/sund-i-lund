@@ -31,56 +31,27 @@
         </b-col>
       </b-row>
       <b-row class="icon-container">
-        <b-col cols="12">
-          <p class="icon-col">Till Bloggen!</p>
-        </b-col>
         <b-col class="icon-col" cols="12">
           <router-link class="icon-col" to="blogg">
-            <i class="icon-opt fas fa-blog faa-pulse animated fa-3x" title="Till bloggen!"></i>
+            <p class="blog-text-animation">Till Bloggen!</p>
+            <!-- <i class="icon-opt fas fa-blog faa-pulse animated fa-3x" title="Till bloggen!"></i> -->
           </router-link>
         </b-col>
       </b-row>
     </b-container>e
-    <Posts />
-    <!-- <b-container>
-      <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
-      </b-row>
-      <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
-      </b-row>
-      <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
-      </b-row>
-      <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
-      </b-row>
-      <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
-      </b-row>
-      <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
-      </b-row>
-      <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
-      </b-row>
-    </b-container>-->
+    <Gallery />
   </div>
 </template>
 <script>
-import Posts from "@/components/Posts.vue";
+import Gallery from "@/components/Gallery.vue";
 export default {
   name: "home",
   components: {
-    Posts
+    Gallery
   }
 };
 </script>
 <style lang="scss" scoped>
-// .collll {
-//   height: 200px;
-//   margin-bottom: 20px;
-// }
 .home {
   height: 100vh;
   max-width: 600px;
@@ -103,14 +74,18 @@ export default {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      h2, h3 {
+      animation: 2s ease-out 0s 1 zoomIn;
+      }
     }
   }
   .info {
-    margin-top: 30px;
+    margin-top: 60px;
     padding: 20px;
     border-radius: 10px;
     color: var(--text);
     background-color: rgba(0, 0, 0, 0.3);
+        animation: 2s ease-out 0s 1 fadeInLeftBig;
     .author-pic {
       border-radius: 50%;
       width: 100px;
@@ -125,8 +100,12 @@ export default {
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      .icon-opt {
+      .blog-text-animation {
+        padding-top: 50px;
+        font-size: 30px;
         &:hover {
+          animation: pulse 2s linear infinite;
+          -webkit-animation: pulse 2s linear infinite;
           cursor: pointer;
           color: var(--buttonColorHover);
         }
@@ -134,7 +113,6 @@ export default {
     }
   }
   /***** PULSE *****/
-
   @-webkit-keyframes pulse {
     0% {
       -webkit-transform: scale(1.1);
@@ -171,12 +149,23 @@ export default {
       transform: scale(1.1);
     }
   }
-
-  .faa-pulse.animated,
-  .faa-pulse.animated-hover:hover,
-  .faa-parent.animated-hover:hover > .faa-pulse {
-    -webkit-animation: pulse 2s linear infinite;
-    animation: pulse 2s linear infinite;
+  /***** zoomIn *****/ 
+  @keyframes zoomIn {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  /***** fadeInLeftBig *****/ 
+  @keyframes fadeInLeftBig {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0)
+    }
   }
 }
 </style>

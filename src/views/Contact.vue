@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: "blogg",
+  name: "kontakt",
   components: {}
 };
 </script>

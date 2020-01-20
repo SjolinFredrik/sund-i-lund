@@ -49,6 +49,7 @@ main {
   background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;
+  scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

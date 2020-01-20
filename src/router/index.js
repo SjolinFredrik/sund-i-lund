@@ -2,7 +2,6 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Blog from "../views/Blog.vue";
-import Gallery from "../views/Gallery.vue";
 import Contact from "../views/Contact.vue";
 import CreatePosts from "../views/CreatePosts.vue";
 import Admin from "../views/Admin.vue";
@@ -14,11 +13,6 @@ const routes = [
     path: "/",
     name: "hem",
     component: Home
-  },
-  {
-    path: "/galleri",
-    name: "galleri",
-    component: Gallery
   },
   {
     path: "/blogg",
