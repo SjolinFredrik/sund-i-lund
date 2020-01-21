@@ -5,13 +5,16 @@ import store from "./store";
 import "./registerServiceWorker";
 
 /***** Styling *****/
-import vueSmoothScroll from "vue2-smooth-scroll";
 import BootstrapVue from "bootstrap-vue";
 import "./scss/custom.scss";
 
+/***** CKEditor *****/
+import CKEditor from "@ckeditor/ckeditor5-vue";
+
 Vue.config.productionTip = false;
 
-Vue.use(BootstrapVue, vueSmoothScroll);
+Vue.use(BootstrapVue);
+Vue.use(CKEditor);
 
 new Vue({
   router,

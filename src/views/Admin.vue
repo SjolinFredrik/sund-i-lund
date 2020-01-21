@@ -1,10 +1,10 @@
 <template>
   <b-container class="admin">
-    <div v-if="loggedIn">
-      Kontrollpanel
+    <div v-if="loggedIn" class="loggedin-container">
+      <Editor />
     </div>
-    <div v-else>
-      <b-row class="my-1 blog-admin-header">
+    <div class="not-loggedin-container" v-else>
+      <b-row class="my-1">
         <b-col sm="6">
           <h3>Blogginloggning</h3>
         </b-col>
@@ -38,9 +38,12 @@
 </template>
 
 <script>
+import Editor from "@/components/Editor.vue";
 export default {
   name: "admin",
-  components: {},
+  components: {
+    Editor
+  },
   // updated() {
   //   console.log(this.email, this.password)
   // },
@@ -80,6 +83,7 @@ export default {
         })
       });
       this.loginPosted = false;
+      this.loggedIn = true;
       let response = await responseRaw.json();
       if (response.msg === "Success") {
         this.loggedIn = true;
@@ -91,9 +95,13 @@ export default {
 
 <style lang="scss">
 .admin {
-  margin-top: 15vh;
   max-width: 600px;
   position: relative;
+  .loggedin-container {
+  }
+  .not-loggedin-container {
+    margin-top: 15rem;
+  }
   .my-1 {
     justify-content: center;
     align-items: center;

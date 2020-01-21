@@ -25,7 +25,7 @@
           <p>
             Hej jag heter Linnea och jag tycker Sjölle e helt mikket snigg. Hej
             jag heter Linnea och jag tycker Sjölle e helt mikket sniggHej jag
-            heter Linnea och jag tycker Sjölle e helt mikket snigg. Hej jag heter
+            heter Linnea och jag tycker Sjölle e helt mikket snigg.Hej jag heter
             Linnea och jag tycker Sjölle e helt mikket snigg.
           </p>
         </b-col>
@@ -38,7 +38,6 @@
           </router-link>
         </b-col>
       </b-row>
-    </b-container>e
     <Gallery />
   </div>
 </template>
@@ -53,7 +52,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .home {
-  height: 100vh;
   max-width: 600px;
   position: relative;
   .eye-catcher {

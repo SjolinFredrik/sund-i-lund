@@ -1,5 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+
+/***** Views *****/
 import Home from "../views/Home.vue";
 import Blog from "../views/Blog.vue";
 import Contact from "../views/Contact.vue";
