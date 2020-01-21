@@ -25,7 +25,7 @@
           <p>
             Hej jag heter Linnea och jag tycker Sjölle e helt mikket snigg. Hej
             jag heter Linnea och jag tycker Sjölle e helt mikket sniggHej jag
-            heter Linnea och jag tycker Sjölle e helt mikket snigg. Hej jag heter
+            heter Linnea och jag tycker Sjölle e helt mikket snigg.Hej jag heter
             Linnea och jag tycker Sjölle e helt mikket snigg.
           </p>
         </b-col>
@@ -36,35 +36,12 @@
         </b-col>
         <b-col class="icon-col" cols="12">
           <router-link class="icon-col" to="blogg">
-            <i class="icon-opt fas fa-blog faa-pulse animated fa-3x" title="Till bloggen!"></i>
+            <!-- <i class="icon-opt fas fa-blog faa-pulse animated fa-3x" title="Till bloggen!"></i> -->
           </router-link>
         </b-col>
       </b-row>
-    </b-container>e
+    </b-container>
     <Posts />
-    <!-- <b-container>
-      <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
-      </b-row>
-      <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
-      </b-row>
-      <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
-      </b-row>
-      <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
-      </b-row>
-      <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
-      </b-row>
-      <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
-      </b-row>
-      <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
-      </b-row>
-    </b-container>-->
   </div>
 </template>
 <script>
@@ -82,7 +59,6 @@ export default {
 //   margin-bottom: 20px;
 // }
 .home {
-  height: 100vh;
   max-width: 600px;
   position: relative;
   .eye-catcher {

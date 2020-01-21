@@ -2,25 +2,25 @@
   <b-container>
     <div>
       <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
+        <b-col class="collll bg-white"></b-col>
       </b-row>
       <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
+        <b-col class="collll bg-white"></b-col>
       </b-row>
       <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
+        <b-col class="collll bg-white"></b-col>
       </b-row>
       <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
+        <b-col class="collll bg-white"></b-col>
       </b-row>
       <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
+        <b-col class="collll bg-white"></b-col>
       </b-row>
       <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
+        <b-col class="collll bg-white"></b-col>
       </b-row>
       <b-row>
-        <b-col class="collll bg-white">Denna collen har en jävla massa artiklar</b-col>
+        <b-col class="collll bg-white"></b-col>
       </b-row>
     </div>
   </b-container>
