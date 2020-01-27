@@ -124,13 +124,13 @@ export default {
     border: none;
     border-radius: 4px;
     color: var(--text);
-    background-color: var(--buttonColor);
+    background-color: var(--breakOffColor);
     &:active {
       opacity: 0.8;
     }
     &:hover {
       cursor: pointer;
-      background-color: var(--buttonColorHover);
+      background-color: var(--breakOffColorHover);
     }
   }
 }

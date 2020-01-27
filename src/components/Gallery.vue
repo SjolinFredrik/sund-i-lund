@@ -18,26 +18,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  #gallery {
-    height: 100vh;
-    border: solid 1px black;
-    .image-container {
-      flex: 25%;
-      max-width: 25%;
+#gallery {
+  border: solid 1px black;
+  .image-container {
+    flex: 25%;
+    max-width: 25%;
+    width: 100%;
+    .image-col {
+      margin-top: 8px;
+      vertical-align: middle;
       width: 100%;
-      .image-col {
-        margin-top: 8px;
-        vertical-align: middle;
-        width: 100%;
-        @media screen and (max-width: 800px) {
-          flex: 50%;
-          max-width: 50%;
-        }
-        @media screen and (max-width: 600px) {
-          flex: 100%;
-          max-width: 100%;
-        }
+      @media screen and (max-width: 800px) {
+        flex: 50%;
+        max-width: 50%;
+      }
+      @media screen and (max-width: 600px) {
+        flex: 100%;
+        max-width: 100%;
       }
     }
   }
+}
 </style>
