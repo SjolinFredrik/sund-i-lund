@@ -87,7 +87,7 @@ export default {
   max-width: 800px;
   position: relative;
   .contact-wrapper {
-    margin-top: 10rem;
+    margin-top: 8rem;
   }
   @media only screen and (max-width: 768px) {
     .contact-wrapper {

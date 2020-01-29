@@ -1,8 +1,8 @@
 <template>
   <footer>
     <b-container fluid>
-      <div class="outer-container pb-3">
-        <div class="inner-container">
+      <div class="outer-container">
+        <div class="inner-container mb-3">
           <div :class="item.class" v-for="item in items" :key="item.id">
             <a :href="item.href" :title="item.title" target="_blank">
               <i :style="item.style" :class="item.icon"></i>&nbsp;
