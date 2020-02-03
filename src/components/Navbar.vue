@@ -17,7 +17,7 @@
         <!-- Overlay content -->
         <ul class="overlay-content">
           <li>
-            <span @click="linksInOverlay('/hem')" class="overlayLink">Hem</span>
+            <span @click="linksInOverlay('/')" class="overlayLink">Hem</span>
           </li>
           <li>
             <span @click="linksInOverlay('/blogg')" class="overlayLink">Blogg</span>
@@ -48,9 +48,6 @@ export default {
   created() {
     window.addEventListener("scroll", this.colorScroll);
   },
-  destroyed() {
-    window.addEventListener("scroll", this.colorScroll);
-  },
   methods: {
     linksInOverlay(link) {
       this.$router.push(link);
@@ -58,12 +55,11 @@ export default {
     },
     // Navbar transparent / colored
     colorScroll() {
-      console.log("aslködjfösdkafjskdlafj");
       this.scrolled = window.scrollY > 0;
       if (this.scrolled) {
         const colorMe = this.$refs.myScroll;
         colorMe.style.background = "rgb(62, 187, 181)";
-        colorMe.style.transition = "all 2s";
+        colorMe.style.transition = "all 1s";
       } else if (!this.scrolled) {
         const colorMe = this.$refs.myScroll;
         colorMe.style.background = "rgba(34, 244, 32, 0.0)";

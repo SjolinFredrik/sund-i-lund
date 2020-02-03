@@ -16,13 +16,13 @@
                     <div>Lördagar:</div>
                   </div>
                   <div class="class-container flex">
-                    <div class="flex-header">Invägning</div>
+                    <div class="flex-header">Check-in</div>
                     <div>17:30 - 18:00</div>
                     <div>17:00 - 17:30</div>
                     <div>09:30 - 10:00</div>
                   </div>
                   <div class="class-container flex">
-                    <div class="flex-header">Gruppmöte</div>
+                    <div class="flex-header">Workshop</div>
                     <div>18:00 - 19:00</div>
                     <div>17:30 - 18:30</div>
                     <div>10:00 - 11:00</div>

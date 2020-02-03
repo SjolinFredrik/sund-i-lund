@@ -2,14 +2,26 @@
   <b-container class="admin">
     <div v-if="loggedIn" class="loggedin-container">
       <Editor />
+      <div class="button-wrapper">
+        <div class="button-container">
+          <b-row class="centering">
+            <b-col sm="6" lg="6">
+              <button type="submit" class="primary-btn">
+                <b-spinner v-if="logoutPosted" small />
+                <span v-else>Logga ut</span>
+              </button>
+            </b-col>
+          </b-row>
+        </div>
+      </div>
     </div>
     <div class="not-loggedin-container" v-else>
-      <b-row class="my-1">
+      <b-row class="centering">
         <b-col sm="6">
           <h3>Blogginloggning</h3>
         </b-col>
       </b-row>
-      <b-row class="my-1">
+      <b-row class="centering">
         <b-col sm="6" lg="6">
           <form @submit="submitLogin">
             <input
@@ -44,9 +56,6 @@ export default {
   components: {
     Editor
   },
-  // updated() {
-  //   console.log(this.email, this.password)
-  // },
   data() {
     return {
       email: "",
@@ -98,29 +107,54 @@ export default {
   max-width: 600px;
   position: relative;
   .loggedin-container {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    .button-container {
+      padding: 20px;
+    }
+    .fel {
+      display: flex;
+      justify-content: space-evenly;
+    }
   }
   .not-loggedin-container {
     margin-top: 15rem;
   }
-  .my-1 {
+  .centering {
     justify-content: center;
     align-items: center;
   }
   .admin-inputs {
-    text-indent: 10px;
     width: 100%;
     height: 38px;
-    border-radius: 4px;
+    background: #fff;
     color: var(--inputColor);
+    border-radius: 4px;
+    border: 1px solid #d1d1d1;
+    box-shadow: inset 1px 2px 8px rbga(0, 0, 0, 0.07);
+    // font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.45;
+    outline: none;
+    padding: 0.6rem 1.45rem 0.7rem;
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.25);
+    -webkit-transition: 0.18s ease-out;
+    -moz-transition: 0.18s ease-out;
+    -o-transition: 0.18s ease-out;
+    transition: 0.18s ease-out;
     &:focus {
       outline: none;
-      box-shadow: none;
+      color: #4b515d;
+      border: 1px solid #b8b6b6;
+      box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01),
+        0px 0px 8px rgba(0, 0, 0, 0.2);
     }
   }
   .primary-btn {
     margin: 0 auto;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     border: none;
     border-radius: 4px;
     color: var(--text);
@@ -132,6 +166,9 @@ export default {
       cursor: pointer;
       background-color: var(--breakOffColorHover);
     }
+  }
+  h3 {
+    color: var(--breakOffColor) !important;
   }
 }
 </style>

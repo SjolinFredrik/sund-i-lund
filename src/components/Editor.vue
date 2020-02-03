@@ -1,14 +1,8 @@
 <template>
   <b-container class="editor">
-    <b-row class="outer-container pt-5">
+    <b-row class="outer-container">
       <b-col>
         <h3>Kontrollpanel</h3>
-      </b-col>
-      <b-col>
-        <button type="submit" class="primary-btn">
-          <b-spinner v-if="logoutPosted" small />
-          <span v-else>Logga ut</span>
-        </button>
       </b-col>
     </b-row>
     <b-row>
@@ -42,7 +36,6 @@ export default {
   max-width: 700px;
   position: relative;
   .outer-container {
-    margin-top: 10rem;
   }
   #editor-container {
     width: 100%;
