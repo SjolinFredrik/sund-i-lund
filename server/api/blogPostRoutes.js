@@ -1,5 +1,5 @@
 const express = require("express");
-const BlogPost = require("../schema/BlogPost");
+const BlogPost = require("../schema/Blogpost");
 
 const router = express.Router();
 
