@@ -6,6 +6,7 @@ const router = express.Router();
 router.get("/api/blogposts", async (req, res) => {
   console.log("running");
   let allBlogPosts = await BlogPost.find();
+  allBlogPosts.reverse()
   res.status(200).send(allBlogPosts);
 });
 

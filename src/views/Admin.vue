@@ -17,6 +17,7 @@
             <span v-else>Publicera inlägg</span>
           </button>
         </div>
+        <p v-if="errorText">{{ errorText }}</p>
       </div>
       <div class="button-wrapper">
         <div class="button-container">
@@ -80,7 +81,8 @@ export default {
       loginPosted: false,
       header: "",
       body: "",
-      loading: false
+      loading: false,
+      errorText: ""
     };
   },
   beforeMount() {
@@ -89,16 +91,23 @@ export default {
   methods: {
     async submitPost() {
       this.loading = true;
-      await fetch("/api/blogposts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          header: this.header,
-          body: this.body
-        })
-      });
+      try {
+        const response = await fetch("/api/blogposts", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            header: this.header,
+            body: this.body
+          })
+        });
+        if (response.status === 200) {
+          this.$router.push("/blogg");
+        }
+      } catch (err) {
+        this.errorText = "Hoppsan, något gick fel";
+      }
       this.loading = false;
     },
     async checkIfLoggedIn() {

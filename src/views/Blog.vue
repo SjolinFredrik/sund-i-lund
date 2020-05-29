@@ -19,7 +19,7 @@
         <p>{{ post.body }}</p>
       </b-col>
       <b-col cols="12" v-if="post.date" class="date text-right">
-        <p>{{ post.date.split("T")[0] }}</p>
+        <p>{{ post.date.split("T")[0] }}, kl {{ post.date.split("T")[1].split(".")[0] }}</p>
       </b-col>
     </b-row>
   </b-container>
