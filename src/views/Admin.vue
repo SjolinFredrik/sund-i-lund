@@ -1,15 +1,31 @@
 <template>
   <b-container class="admin">
     <div v-if="loggedIn" class="loggedin-container">
-      <Editor />
+      <div class="blogpost-wrapper">
+        <h2>Skapa nytt inlägg</h2>
+        <div class="input-grp">
+          <label for="header-text">Rubrik</label><br />
+          <input name="header-text" type="text" v-model="header" />
+        </div>
+        <div class="input-grp">
+          <label for="body-text">Bloggtext</label><br />
+          <textarea name="body-text" type="text" v-model="body" />
+        </div>
+        <div class="btn-holder">
+          <button @click="submitPost" class="primary-btn">
+            <b-spinner v-if="loading" small />
+            <span v-else>Publicera inlägg</span>
+          </button>
+        </div>
+      </div>
       <div class="button-wrapper">
         <div class="button-container">
           <b-row class="centering">
             <b-col sm="6" lg="6">
-              <button type="submit" class="primary-btn">
+              <!-- <button type="submit" class="primary-btn">
                 <b-spinner v-if="logoutPosted" small />
                 <span v-else>Logga ut</span>
-              </button>
+              </button> -->
             </b-col>
           </b-row>
         </div>
@@ -50,24 +66,41 @@
 </template>
 
 <script>
-import Editor from "@/components/Editor.vue";
+// import Editor from "@/components/Editor.vue";
 export default {
   name: "admin",
   components: {
-    Editor
+    // Editor
   },
   data() {
     return {
       email: "",
       password: "",
       loggedIn: false,
-      loginPosted: false
+      loginPosted: false,
+      header: "",
+      body: "",
+      loading: false
     };
   },
   beforeMount() {
     this.checkIfLoggedIn();
   },
   methods: {
+    async submitPost() {
+      this.loading = true;
+      await fetch("/api/blogposts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          header: this.header,
+          body: this.body
+        })
+      });
+      this.loading = false;
+    },
     async checkIfLoggedIn() {
       let responseRaw = await fetch("/api/login");
       let response = await responseRaw.json();
@@ -80,7 +113,6 @@ export default {
     async submitLogin(e) {
       e.preventDefault();
       this.loginPosted = true;
-      // Postrequest...
       let responseRaw = await fetch("/api/login", {
         method: "POST",
         headers: {
@@ -110,6 +142,24 @@ export default {
     margin-top: 6rem;
     display: flex;
     flex-direction: column;
+    .blogpost-wrapper {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      h2 {
+        text-align: center;
+      }
+      & > * > * {
+        width: 100%;
+      }
+      .input-grp {
+        margin-bottom: 2rem;
+        textarea {
+          min-height: 300px;
+        }
+      }
+    }
     .button-container {
       padding: 20px;
     }

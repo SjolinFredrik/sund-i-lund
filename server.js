@@ -12,7 +12,7 @@ const connectToDb = require("./server/config/db");
 // Routes
 const loginRoutes = require("./server/api/loginRoutes");
 const userRoutes = require("./server/api/userRoutes");
-// const articleRoutes = require("./server/api/articleRoutes");
+const blogPostRoutes = require("./server/api/blogPostRoutes");
 
 connectToDb();
 
@@ -34,7 +34,7 @@ app.use(
   })
 );
 
-app.use(loginRoutes, userRoutes);
+app.use(loginRoutes, userRoutes, blogPostRoutes);
 
 //here we are configuring dist to serve app files
 app.use("/", serveStatic(path.join(__dirname, "/dist")));
